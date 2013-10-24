@@ -22,13 +22,12 @@ module Ideabox
       def display_idea(idea)
         "#{idea['id']} - #{idea['title']} - #{idea['description']}"
       end
-
     }
 
     desc "new",
       "create a new idea, ex => title :: description % tag, tag, tag"
     def new(*input)
-      api.create(input.join(" "))
+      puts api.create(input.join(" "))
     end
 
     desc "list",
