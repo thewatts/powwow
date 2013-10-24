@@ -14,7 +14,7 @@ class ClientTest < MiniTest::Test
   end
 
   def secret
-   "Make everything as simple as possible, but not simpler. 1234abcd"
+   "Make everything as simple as possible, but not simpler. abc1234"
   end
 
   def test_it_exists
@@ -41,7 +41,7 @@ class ClientTest < MiniTest::Test
 
   def test_it_creates_a_new_idea
     input = "go swimming :: in the vast vast ocean % tan, swim, beach"
-    response = "Thanks, Nathaniel, for creating 'go swimming' !!"
+    response = "Thanks, Bill Cosby, for creating 'go swimming' !!"
     url = "http://localhost:9292"
     client = Powwow::Client.new(url, valid_key)
     assert_equal response, client.create(input)
