@@ -2,7 +2,7 @@ require 'faraday'
 require 'pry'
 require 'json'
 
-module Ideabox
+module Powwow
 
   class Client
 

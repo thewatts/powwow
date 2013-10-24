@@ -1,7 +1,7 @@
 require 'thor'
-require './lib/ideabox'
+require './lib/powwow'
 
-module Ideabox
+module Powwow
 
   class Thor < ::Thor
 
@@ -16,7 +16,7 @@ module Ideabox
       end
 
       def api
-        Ideabox::Client.new(url, access_key)
+        Powwow::Client.new(url, access_key)
       end
 
       def display_idea(idea)

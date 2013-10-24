@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ideabox/version'
+require 'powwow/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ideabox"
-  spec.version       = Ideabox::VERSION
+  spec.name          = "powwow"
+  spec.version       = Powwow::VERSION
   spec.authors       = ["Nathaniel Watts"]
   spec.email         = ["reg@nathanielwatts.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{This gem interfaces with the powwow.io project, build for gSchool}
+  spec.summary       = %q{See description :)}
   spec.homepage      = ""
   spec.license       = "MIT"
 

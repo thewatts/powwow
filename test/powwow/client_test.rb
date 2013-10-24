@@ -5,7 +5,7 @@ class ClientTest < MiniTest::Test
   attr_reader :client, :valid_key
 
   def setup
-    @client = Ideabox::Client.new
+    @client = Powwow::Client.new
     @valid_key = create_key
   end
 
@@ -18,12 +18,12 @@ class ClientTest < MiniTest::Test
   end
 
   def test_it_exists
-    assert Ideabox::Client
+    assert Powwow::Client
   end
 
   def test_it_creates_connection
     url = "http://google.com"
-    client = Ideabox::Client.new(url)
+    client = Powwow::Client.new(url)
     assert_kind_of Faraday::Connection, client.conn
   end
 
@@ -43,14 +43,14 @@ class ClientTest < MiniTest::Test
     input = "go swimming :: in the vast vast ocean % tan, swim, beach"
     response = "Thanks, Nathaniel, for creating 'go swimming' !!"
     url = "http://localhost:9292"
-    client = Ideabox::Client.new(url, valid_key)
+    client = Powwow::Client.new(url, valid_key)
     assert_equal response, client.create(input)
   end
 
   def test_it_gets_users_ideas
     response = "hello"
     url = "http://localhost:9292"
-    client = Ideabox::Client.new(url, valid_key)
+    client = Powwow::Client.new(url, valid_key)
     assert_kind_of Array, client.list["ideas"]
   end
 
